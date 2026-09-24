@@ -55,11 +55,11 @@ function formatValue(value, options){
      */
     
 
-    if(Array.isArray(value)){
+    if(value && Array.isArray(value)){
         return `List (${value.length})`
     }
 
-    if(typeof value === 'object'){
+    if(value && typeof value === 'object'){
 
         if('@type' in value){
             return formatValueAsThing(value, options)
@@ -67,7 +67,7 @@ function formatValue(value, options){
         return JSON.stringify(value)
     }
 
-    if(typeof value === 'string'){
+    if(value && typeof value === 'string'){
         if(value.startsWith('http')){
             return formatValueAsUrl(value, options)
         }

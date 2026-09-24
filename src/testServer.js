@@ -95,6 +95,9 @@ app.get('/', async (req, res, next) => {
             "result": db.records
         }
 
+        console.log(db.records)
+
+
         let html = await webpage.baseElement(r)
 
         res.send(html)
