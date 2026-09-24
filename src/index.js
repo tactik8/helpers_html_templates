@@ -11,6 +11,15 @@ export const helpers_html = {
 
 }
 
+
+
+
+
+
+
+
+
+
 /**
  * Format record for html display. This function will format the record to include links for @id and @type fields, and recursively format nested objects and arrays.
  * @param {Object|Array} value - The record or array of records to format.

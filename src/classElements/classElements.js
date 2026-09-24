@@ -428,6 +428,12 @@ export class WebPage extends BaseClass {
 
 
 
+    /**
+     * All in one function to get generic component
+     * @param {*} record 
+     * @param {*} baseUrl 
+     * @returns 
+     */
     async baseElement(record, baseUrl){
         
         baseUrl = baseUrl || this.baseUrl || this.website.baseUrl
@@ -542,6 +548,17 @@ export class WebSite extends BaseClass {
     }
 
 
+    /**
+     * All in one funciton to get generic component
+     * @param {*} record 
+     * @param {*} baseUrl 
+     */
+    async baseElement(value, baseUrl){
+
+        let webpage = this.webpage()
+        return await webpage.baseElement(value, baseUrl)
+
+    }
    
 
 }
